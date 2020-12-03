@@ -9,8 +9,7 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-const ENDPOINT = process.env.NODE_ENV === 'development' ? 'localhost:5000' : 'https://react-chat-app-room-server.herokuapp.com/';
-
+const ENDPOINT = process.env.NODE_ENV === 'development' ? 'localhost:5000' : 'https://react-chat-app-server.herokuapp.com/';
 let socket;
 
 const Chat = ({ location }) => {

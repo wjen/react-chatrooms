@@ -10,15 +10,15 @@ const server = http.createServer(app);
 
 const io = socketio(server, {
   cors: {
-    origin: process.env.NODE_ENV === 'development' ? 'localhost:3000' : "https://react-chat-app-client.herokuapp.com",
+    origin: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://react-chat-app-client.herokuapp.com/', 
     credentials: true
   } 
 });
-console.log(process.env.PRODUCT);
-console.log(process.env.NODE_ENV);
-console.log('his');
-const PORT = process.env.PORT || 5000;
 
+console.log(process.env.NODE_ENV);
+const PORT = process.env.PORT || 5000;
+console.log(PORT);
+console.log('server');
 const router = require('./router');
 const { Console } = require('console');
 
